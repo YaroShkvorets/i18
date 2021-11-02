@@ -1,0 +1,19 @@
+{
+  "name": "jsondiff",
+  "version": "1.0.0",
+  "description": "JSON diff for translations",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaroshkvorets/i18.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaroshkvorets/i18/issues"
+  },
+  "homepage": "https://github.com/yaroshkvorets/i18#readme"
+}
