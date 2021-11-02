@@ -17,9 +17,21 @@ function diff()
 {
     var beforeJson = document.getElementById("before").value
     var afterJson = document.getElementById("after").value
+    try{
+      eval(`var before = ${beforeJson}`);
+    }
+    catch(err){
+      alert("BEFORE: " + err)
+      return;
+    }
 
-    eval(`var before = ${beforeJson}`);
-    eval(`var after = ${afterJson}`);
+    try{
+      eval(`var after = ${afterJson}`);
+    }
+    catch(err){
+      alert("AFTER: " + err)
+      return;
+    }
 
     console.log('parsing ', before , ' to ', after)
 
