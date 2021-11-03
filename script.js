@@ -13,6 +13,21 @@ function getDiff(before, after)
     return Object.keys(res).length ? res : null;
 }
 
+function getMerge(old_, new_)
+{
+    if(!new_ || Object.keys(new_).length == 0) return old_;
+    if(!old_ || Object.keys(old_).length == 0) return new_;
+    if(typeof old_ == "string") return new_;
+    for(let key of Object.keys(old_)){
+      console.log(old_[key], new_[key])
+      old_[key] = getMerge(old_[key], new_[key])
+    }
+    for(let key of Object.keys(new_)){
+      if(!old_[key]) old_[key] = new_[key]
+    }
+    return old_;
+}
+
 function diff()
 {
     var beforeJson = document.getElementById("before").value
@@ -39,6 +54,34 @@ function diff()
 
     document.getElementById("result").value = diff ? JSON.stringify(diff, null, "  ") : "NO CHANGES"
 }
+
+function merge()
+{
+    var oldJson = document.getElementById("oldjson").value
+    var newJson = document.getElementById("newjson").value
+    try{
+      eval(`var old = ${oldJson}`);
+    }
+    catch(err){
+      alert("OLD: " + err)
+      return;
+    }
+
+    try{
+      eval(`var new_ = ${newJson}`);
+    }
+    catch(err){
+      alert("NEW: " + err)
+      return;
+    }
+
+    console.log('parsing ', old , ' and ', new_)
+
+    const merge = getMerge(old, new_);
+
+    document.getElementById("result").value = merge ? JSON.stringify(merge, null, "  ") : "NO CHANGES"
+}
+
 
 
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>JSON Merge</title>
+
+        <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+
+        <script src="../script.js" type="text/javascript" charset="utf-8"></script>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+
+        <div id="main">
+            <div class="header">
+                <h1>JSON Merge</h1>
+
+            </div>
+
+            <div class="initContainer">
+                <div class="before">
+                    <h2>OLD</h2>
+                    <textarea spellcheck="false" id="oldjson" placeholder="Copy-paste 'old' JSON" tabindex="1"></textarea>
+                </div>
+
+                <div class="after">
+                    <h2>NEW</h2>
+                    <textarea spellcheck="false" id="newjson" placeholder="Copy-paste 'new' JSON" tabindex="2"></textarea>
+                </div>
+                <div class="center">
+                    <button id="compare" tabindex="3" class="compare_btn" onclick="merge()">☞ ☞ ☞ </button>
+                </div>
+                <div class="result">
+                    <h2>RESULT</h2>
+                    <textarea spellcheck="false" id="result" placeholder="Result will be here" tabindex="2"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

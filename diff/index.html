@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>JSON Diff</title>
+
+        <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+
+        <script src="../script.js" type="text/javascript" charset="utf-8"></script>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+
+        <div id="main">
+            <div class="header">
+                <h1>JSON Diff</h1>
+
+            </div>
+
+            <div class="initContainer">
+                <div class="before">
+                    <h2>BEFORE</h2>
+                    <textarea spellcheck="false" id="before" placeholder="Copy-paste 'before' JSON" tabindex="1"></textarea>
+                </div>
+
+                <div class="after">
+                    <h2>AFTER</h2>
+                    <textarea spellcheck="false" class="right" id="after" placeholder="Copy-paste 'after' JSON" tabindex="2"></textarea>
+                </div>
+                <div class="center">
+                    <button id="compare" tabindex="3" class="compare_btn" onclick="diff()">☞ ☞ ☞ </button>
+                </div>
+                <div class="result">
+                    <h2>RESULT</h2>
+                    <textarea spellcheck="false" class="right" id="result" placeholder="Result will be here" tabindex="2"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -15,18 +15,21 @@ h2 {
     margin-bottom: .1em;
     font-weight: 300;
 }
+a {
+    color: hsl(245, 100%, 16%)
+}
 
 #main {
     margin: 25px auto;
     width: 95%
 }
 
-div.before {
+div.before, div.old {
     width: 30%;
     display: inline-block;
 }
 
-div.after {
+div.after, div.new {
     width: 30%;
     margin-left: 10px;
     display: inline-block;
