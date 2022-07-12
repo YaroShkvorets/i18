@@ -52,7 +52,7 @@ function diff()
 
     const diff = getDiff(before, after);
 
-    document.getElementById("result").value = diff ? JSON.stringify(diff, null, "  ") : "NO CHANGES"
+    document.getElementById("result").value = diff ? JSON.stringify(diff, null, 4) : "NO CHANGES"
 }
 
 function merge()
@@ -79,7 +79,7 @@ function merge()
 
     const merge = getMerge(old, new_);
 
-    document.getElementById("result").value = merge ? JSON.stringify(merge, null, "  ") : "NO CHANGES"
+    document.getElementById("result").value = merge ? JSON.stringify(merge, null, 4) : "NO CHANGES"
 }
 
 
